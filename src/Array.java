@@ -16,7 +16,8 @@ public class Array {
     // Task 1
     static void changeArray(int[] inputArray) {
         System.out.println("Task  1.");
-        System.out.println("Input Array:\n" + Arrays.toString(inputArray));
+        System.out.print("Input Array:\n");
+        printArray(inputArray);
         for (int i = 0; i < inputArray.length; i++) {
             if (inputArray[i] == 0) {
                 inputArray[i] = 1;
@@ -24,31 +25,43 @@ public class Array {
                 inputArray[i] = 0;
             }
         }
-        System.out.println("Changed array:\n" + Arrays.toString(inputArray));
+        System.out.print("Changed array:\n");
+        printArray(inputArray);
 
+    }
+
+    static void printArray (int[] inputArray){
+        for (int element: inputArray){
+            System.out.print (element + " ");
+        }
+        System.out.println();
     }
 
     //Task2
     static void fillArray(int[] inputArray) {
         System.out.println("Task 2");
-        System.out.println("Input Array:\n" + Arrays.toString(inputArray));
+        System.out.print("Input Array:\n");
+        printArray(inputArray);
         for (int i = 0; i < inputArray.length; i++) {
             inputArray[i] = i * 3;
         }
-        System.out.println("Changed array:\n" + Arrays.toString(inputArray));
+        System.out.print("Changed array:\n");
+        printArray(inputArray);
 
     }
 
     //Task 3
     static void multiplyArray(int[] inputArray) {
         System.out.println("Task 3");
-        System.out.println("Input Array:\n" + Arrays.toString(inputArray));
+        System.out.print("Input Array:\n");
+        printArray(inputArray);
         for (int i = 0; i < inputArray.length; i++) {
             if (inputArray[i] < 6) {
                 inputArray[i] *= 2;
             }
         }
-        System.out.println("Changed array:\n" + Arrays.toString(inputArray));
+        System.out.print("Changed array:\n");
+        printArray(inputArray);
     }
 
     //Task 4
@@ -94,7 +107,8 @@ public class Array {
     //Task 6
     static boolean checkBalance(int[] inputArray) {
         System.out.println("Task 6*.");
-        System.out.println(Arrays.toString(inputArray));
+        System.out.print("Input Array:\n");
+        printArray(inputArray);
         int rightSideSum = 0;
         for (int i = 0; i < inputArray.length; i++) {
             rightSideSum += inputArray[i];
@@ -112,7 +126,9 @@ public class Array {
     // Task 7
     static void moveArray(int[] inputArray, int n) {
         System.out.println("Task 7***");
-        System.out.println(Arrays.toString(inputArray));
+        System.out.print("Input Array:\n");
+        printArray(inputArray);
+        System.out.println ("shift " + n);
         if (n > 0) {
             for (int i = 0; i < n; i++) {
                 int temp = inputArray[0];
@@ -122,7 +138,8 @@ public class Array {
                 }
                 inputArray[1] = temp;
             }
-            System.out.println(Arrays.toString(inputArray));
+            System.out.print("Changed array:\n");
+            printArray(inputArray);
         }
         if (n<0){
             for (int i=0;i>n;i--){
@@ -133,7 +150,8 @@ public class Array {
                 }
                 inputArray[inputArray.length-2]=temp;
             }
-            System.out.println(Arrays.toString(inputArray));
+            System.out.print("Changed array:\n");
+            printArray(inputArray);
         }
     }
 }
