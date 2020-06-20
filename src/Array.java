@@ -31,10 +31,11 @@ public class Array {
     }
 
     static void printArray (int[] inputArray){
-        for (int element: inputArray){
-            System.out.print (element + " ");
+        for (int i =0; i<inputArray.length;i++){
+            System.out.print(inputArray[i]+" ");
         }
         System.out.println();
+
     }
 
     //Task2
