@@ -4,20 +4,27 @@ import java.util.Scanner;
 public class GuessingGame {
 
     public static void main(String[] args) {
+        chooseGame();
+    }
+
+    static void chooseGame(){
         System.out.println ("В какую игру хотите сыграть ? 1 - Угадай число, 2 - Угадай слово");
         Scanner scanner = new Scanner (System.in);
         int game = scanner.nextInt();
 
         switch (game) {
             case 1:playGuessNumber();
-            break;
+                break;
             case 2: playGuessWord();
-            break;
+                break;
             default:
                 System.out.println("Не хотите играть ? Ну ладно...");
                 break;
         }
+
     }
+
+
     static void playGuessNumber() {
 
         System.out.println("Добро пожаловать в игру Угадай число!");
