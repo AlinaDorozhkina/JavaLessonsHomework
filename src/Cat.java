@@ -1,30 +1,41 @@
-
-
 public class Cat extends Animal {
     private String name;
+
     public Cat(String name) {
         super(200, 0, 2);
-        this.name=name;
+        this.name = name;
     }
 
     @Override
-    public void swim(float inputSwimValue){
+    public void swim(float inputSwimValue) {
         System.out.println(String.format("%s can't swim", name));
     }
+
     @Override
-    public void run (float inputRunValue){
+    public void run(float inputRunValue) {
         System.out.print(String.format("%s runs %.2f metres: ", name, inputRunValue));
         super.run(inputRunValue);
     }
+
     @Override
-    public void jump(float inputJumpValue){
+    public void jump(float inputJumpValue) {
         System.out.print(String.format("%s jumps %.2f metres: ", name, inputJumpValue));
         super.jump(inputJumpValue);
     }
 
 
-
-
-
-
 }
+/*public class Cat extends Animal {
+
+
+    public Cat(float maxRunValue, float maxSwimValue, float maxJumpValue) {
+        super(maxRunValue, maxSwimValue, maxJumpValue);
+    }
+
+    @Override
+    public void swim(float inputSwimValue){
+        System.out.println("Cats can't swim");
+    }
+}
+
+ */
