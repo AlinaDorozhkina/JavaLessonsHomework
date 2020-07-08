@@ -1,10 +1,16 @@
 public class Cat extends Animal {
     private String name;
 
+
     public Cat(String name) {
-        super(200, 0, 2);
+        super(200.0f, 0.0f, 2.0f);
         this.name = name;
     }
+
+    public Cat(float runValue, float swimValue, float jumpValue) {
+        super(runValue, swimValue, jumpValue);
+    }
+
 
     @Override
     public void swim(float inputSwimValue) {
@@ -23,7 +29,9 @@ public class Cat extends Animal {
         super.jump(inputJumpValue);
     }
 
-
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 /*public class Cat extends Animal {
 
