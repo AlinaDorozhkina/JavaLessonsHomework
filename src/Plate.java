@@ -1,13 +1,13 @@
 public class Plate {
-    private int food;
-    private String color;
+    protected int food;
+    protected String color;
 
     public Plate(int food, String color) {
         this.food = food;
-        this.color=color;
+        this.color = color;
     }
 
-    public void info(){
+    public void info() {
         System.out.println(String.format("There are %d grams \"Whiskas\" in the %s plate.", food, color));
     }
 
@@ -16,16 +16,26 @@ public class Plate {
             food -= portion;
             return true;
         } else {
-            System.out.print("There is no enough 'Whiskas' in the plate, because ");
+            addSomeFood(portion);
+            food -= portion;
+            return true;
         }
-        return false;
+
+
     }
 
-    private boolean isPlateEmpty(int portion){
-        int remains = food-portion;
-        if (remains<0){
+    protected boolean isPlateEmpty(int n) {
+        int remains = food - n;
+        if (remains < 0) {
             return false;
         }
         return true;
+    }
+
+    protected void addSomeFood(int portion) {
+        int remains = portion - food;
+        food += remains;
+        System.out.println("add " + remains + " grams to the plate");
+
     }
 }
