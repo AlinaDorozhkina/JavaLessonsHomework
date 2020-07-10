@@ -13,7 +13,7 @@ public class AutoPlate extends Plate {
     }
 
     private int addFoodFromContainer(int portion) {
-        int remains = portion - food;
+        int remains = portion - food;// вычисляем , сколько не хватаем корма в тарелке, чтоб накормить кота
         if ((container > remains)) {
             System.out.println("Autoadding " + remains + " grams \"Whiskas\" from the auto container");
             return remains;
